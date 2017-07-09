@@ -1,0 +1,36 @@
+<article>				
+ <header>
+  
+  {% if link %}
+   
+   <h2><a href="{{ path("tuto_animaux_voir", {id: animal.id}) }}" title="Voir {{ animal.titre }}">{{ animal.titre }}</a></h2>
+   
+  {% else %}
+   
+   <h2>{{ animal.titre }}</h2>
+   
+  {% endif %}
+  
+  <div class="admin-animal">
+   <a href="{{ path("tuto_animaux_editer", {id: animal.id}) }}" title="Editer animal">Editer</a>
+   <a href="{{ path("tuto_animaux_supprimer", {id: animal.id}) }}" title="Editer animal">Supprimerr</a>
+  </div>
+  
+  <time>{{ animal.date|date('d M Y') }}</time>
+  
+ </header>
+  
+ <div class="content">
+  <img width="200" src="{{ animal.url }}" alt="{{ animal.titre }}"
+ </div>
+ 
+ <p>
+  {{ animal.description|nl2br }}
+ </p>
+ 
+ {% if back_link %}
+   
+   <p><a href="{{ path("tuto_animaux_homepage") }}" title="Retourner à la liste">Retour</a></p>
+   
+  {% endif %}
+</article>

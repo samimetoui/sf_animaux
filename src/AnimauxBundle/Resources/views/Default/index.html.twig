@@ -1,0 +1,7 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+ <h1>Tous les animaux</h1>
+ {% for animal in animaux %}
+  {% include "AnimauxBundle:Default:animal_content.html.twig" with { 'link': true, 'back_link': false } %}
+ {% endfor %}
+{% endblock %}

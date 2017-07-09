@@ -1,0 +1,4 @@
+tuto_animaux:
+    resource: "@AnimauxBundle/Resources/config/routing.yml"
+    prefix:   /
+    

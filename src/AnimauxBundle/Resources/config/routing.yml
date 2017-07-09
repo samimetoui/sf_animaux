@@ -1,0 +1,25 @@
+tuto_animaux_homepage:
+    path:     /
+    defaults: { _controller: AnimauxBundle:Default:index }
+
+tuto_animaux_ajouter:
+    path:     /ajouter
+    defaults: { _controller: AnimauxBundle:Default:ajouter }
+    
+tuto_animaux_voir:
+    path:     /{id}/voir
+    defaults: { _controller: AnimauxBundle:Default:voir }
+    requirements:
+        id: \d+
+
+tuto_animaux_editer:
+    path:     /{id}/editer
+    defaults: { _controller: AnimauxBundle:Default:editer }
+    requirements:
+        id: \d+
+
+tuto_animaux_supprimer:
+    path:     /{id}/supprimer
+    defaults: { _controller: AnimauxBundle:Default:supprimer }
+    requirements:
+        id: \d+
